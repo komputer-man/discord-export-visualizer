@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Export Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <!--
+        Include JSZip from a local copy. This library is used to read the ZIP
+        archive entirely within the browser without uploading data anywhere. It
+        has been copied from the project's node_modules folder so that this
+        tool works offline.
+    -->
+    <script src="jszip.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Discord Export Visualizer</h1>
+        <p>
+            Load your Discord export file (ZIP) into this tool to explore and
+            visualize its contents in a structured way. <strong style="color: #c0392b;">All processing happens 100% offline in your browser.</strong>
+        </p>
+    </header>
+    <main>
+        <!-- File upload controls -->
+        <section id="upload-section" class="card">
+            <h2>Select file or drag &amp; drop</h2>
+            <p>Select your Discord export (ZIP) or drag it here to load its contents.</p>
+            <input type="file" id="fileInput" accept=".zip" />
+            <div id="dropZone" class="drop-zone">
+                <span>Drag ZIP file here</span>
+            </div>
+            <div id="upload-status"></div>
+        </section>
+        <!-- Navigation and content area -->
+        <nav id="nav" class="hidden"></nav>
+        <section id="content"></section>
+        <!-- Test results -->
+        <section id="test-section" class="hidden">
+            <h2>Tests</h2>
+            <button id="runTests">Run tests</button>
+            <div id="testResults"></div>
+        </section>
+    </main>
+    <!-- Main application logic. Using ES modules enables us to import the
+         individual visualizer modules cleanly. -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>
