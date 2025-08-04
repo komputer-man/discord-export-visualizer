@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Export Visualizer</title>
+    <title>Discord Export Visualizer – View Your Discord Data Safely Offline</title>
+    <meta name="description" content="Explore and visualize your exported Discord data (ZIP) securely and privately in your browser. 100% offline. Open source and no data ever uploaded.">
+    <meta name="keywords" content="Discord, Discord Export, Discord Data, Discord Viewer, Discord ZIP, Discord Offline Viewer, Open Source, Privacy">
+    <meta name="author" content="komputer-man">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="style.css">
-    <!--
-        Include JSZip from a local copy. This library is used to read the ZIP
-        archive entirely within the browser without uploading data anywhere. It
-        has been copied from the project's node_modules folder so that this
-        tool works offline.
-    -->
     <script src="jszip.min.js"></script>
 </head>
 <body>
@@ -21,6 +19,7 @@
             visualize its contents in a structured way. <strong style="color: #c0392b;">All processing happens 100% offline in your browser.</strong>
         </p>
     </header>
+
     <main>
         <!-- File upload controls -->
         <section id="upload-section" class="card">
@@ -32,9 +31,11 @@
             </div>
             <div id="upload-status"></div>
         </section>
+
         <!-- Navigation and content area -->
         <nav id="nav" class="hidden"></nav>
         <section id="content"></section>
+
         <!-- Test results -->
         <section id="test-section" class="hidden">
             <h2>Tests</h2>
@@ -42,8 +43,13 @@
             <div id="testResults"></div>
         </section>
     </main>
-    <!-- Main application logic. Using ES modules enables us to import the
-         individual visualizer modules cleanly. -->
+
+    <footer style="margin-top: 2rem; padding: 2rem; text-align: center; font-size: 0.9rem; background: #f9f9f9; border-top: 1px solid #ddd;">
+        <p><strong>Discord Export Visualizer</strong> is an <a href="https://github.com/komputer-man/discord-export-visualizer" target="_blank" rel="noopener">open-source project on GitHub</a>.</p>
+        <p style="color: #c0392b;"><strong>No data is ever uploaded or stored – all processing is done locally in your browser.</strong></p>
+        <p>Built with privacy and transparency in mind.</p>
+    </footer>
+
     <script type="module" src="main.js"></script>
 </body>
 </html>
