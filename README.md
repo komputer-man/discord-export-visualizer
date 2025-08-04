@@ -1,3 +1,5 @@
+![Badge](https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2Fkomputer-man%2Fdiscord-export-visualizer%2F&label=Discord+Visualizer&icon=github&color=%23198754&message=&style=flat&tz=UTC)
+
 # Discord Export Visualizer
 
 **Discord Export Visualizer** lets you securely explore your Discord data exports (ZIP files) — **100% offline, in your browser**. It's privacy-first and fully open-source.
